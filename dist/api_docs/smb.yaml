@@ -35,5 +35,4 @@ paths:
                           example: 366CE211-77A2-4CF3-9630-D3E023AF7BBC
                         companyname:
                           type: string
-			 example: "test"
                         
