@@ -1,0 +1,5 @@
+{
+    "SMB APIs": {
+        "url": "dist/api_docs/smb.yaml"
+    }
+}

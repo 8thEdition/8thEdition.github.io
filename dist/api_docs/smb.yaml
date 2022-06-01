@@ -1,0 +1,39 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: SMB API
+paths:
+  /api/v1.php/customer:
+    get:
+      tags:
+        - All
+        - Customer
+      parameters:
+        - name: name
+          in: query
+          required: true
+      responses:
+        '200':
+          description: The return result should be a JSON format.
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - customers
+                properties:
+                  customers:
+                    type: array
+                    items:
+                      type: object
+                      required:
+                        - cid
+                        - companyname
+                      properties:
+                        cid:
+                          type: string
+                          example: 366CE211-77A2-4CF3-9630-D3E023AF7BBC
+                        companyname:
+                          type: string
+			 example: "test"
+                        
