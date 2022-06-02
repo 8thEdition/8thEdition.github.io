@@ -30,20 +30,22 @@ elif [ "$CMD" == "create-new-category" ]; then
     done
 
     doc_utils=api_docs/${category}/
-    doc_file=api_docs/${category}.yaml
+    doc_file_name=${category}.yaml
+    doc_file=api_docs/${doc_file_name}
     if [[ -d ${doc_utils} ]]; then
       echo "${doc_utils} already exists"
-      exit 1
+    else
+      mkdir ${doc_utils}
+      cp api_docs/example/* ${doc_utils}
     fi
 
     if [[ -f ${doc_file} ]]; then
       echo "${doc_file} already exists"
-      exit 1
+    else
+      cp api_docs/example.yaml ${doc_file}
     fi
-    mkdir ${doc_utils}
-    cp api_docs/example/* ${doc_utils}
-    cp api_docs/example.yaml ${doc_file}
-    cat config.json | jq -r  --arg category ${category} --arg file_name ${doc_file} '. += [{"category": $category, "file_name": $file_name}]' > config.json
+    jq -r  --arg category ${category} --arg file_name ${doc_file_name} '. += [{"category": $category, "file_name": $file_name}]' config.json > config.json.tmp
+    mv config.json.tmp config.json
 else
     echo "Invalid command"
     exit 1

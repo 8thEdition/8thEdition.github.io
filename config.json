@@ -1,6 +1,10 @@
 [
-    {
-        "category": "example",
-        "file_name": "example.yaml"
-    }
+  {
+    "category": "example",
+    "file_name": "example.yaml"
+  },
+  {
+    "category": "test",
+    "file_name": "test.yaml"
+  }
 ]
