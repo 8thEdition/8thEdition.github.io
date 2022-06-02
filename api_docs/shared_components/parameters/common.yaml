@@ -1,0 +1,9 @@
+cid:
+  name: cid
+  in: query
+  required: true
+  description: Company GUID
+  schema:
+    type: string
+    format: uuid
+    example: 'CC570156-81E5-11E9-B5D5-CBC372ED1322'

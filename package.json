@@ -1,0 +1,21 @@
+{
+  "name": "api-doc",
+  "scripts": {
+    "gen": "./cmd.sh gen-openapi-spec",
+    "build": "npx webpack --config webpack.config.js && ./cmd.sh gen-openapi-spec",
+    "server": "http-server -c-1 --cors -p 8001 . -o"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "path": "^0.12.7",
+    "swagger-merger": "^1.5.4",
+    "swagger-ui-dist": "^4.11.1"
+  },
+  "devDependencies": {
+    "css-loader": "^3.4.2",
+    "http-server": "^14.1.1",
+    "mini-css-extract-plugin": "^1.3.8",
+    "webpack": "^5.24.0",
+    "webpack-cli": "^4.5.0"
+  }
+}

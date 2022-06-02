@@ -1,0 +1,8 @@
+company:
+  type: object
+  required: ["company_id", "company_name"] 
+  properties:
+    company_id:
+      type: string
+    company_name:
+      type: string 
