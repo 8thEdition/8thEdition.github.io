@@ -1,7 +1,0 @@
-components:
-  parameters:
-    $ref#components_parameters_common: '../shared_components/parameters/common.yaml'
-       
-  schemas:
-    $ref#components_schemas_common: '../shared_components/schemas/common.yaml'
- 

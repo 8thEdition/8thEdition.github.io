@@ -1,0 +1,41 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Example
+paths:
+  /api/company:
+    get:
+      tags:
+        - All
+      summary: Get Company
+      parameters:
+        - $ref: '#/components/parameters/cid'
+      responses:
+        '200':
+          description: The return result should be a JSON format.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/company'
+components:
+  parameters:
+    cid:
+      name: cid
+      in: query
+      required: true
+      description: Company GUID
+      schema:
+        type: string
+        format: uuid
+        example: CC570156-81E5-11E9-B5D5-CBC372ED1322
+  schemas:
+    company:
+      type: object
+      required:
+        - company_id
+        - company_name
+      properties:
+        company_id:
+          type: string
+        company_name:
+          type: string
