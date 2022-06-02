@@ -23,9 +23,8 @@ npm run server
 
 
 ## How to Add New API Category
-```
-# Create required folder
-
-```
-
-# How to...
+1. Create new openAPI spec template
+    ```
+    ./cmd.sh create-new-category -c test
+    ```
+3. modify api_docs/${category}.yaml and api_docs/${category}/*
