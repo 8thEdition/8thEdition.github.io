@@ -12,7 +12,7 @@ npm run build
 
 ## How to Generate OpenAPI Spec
 ```
-npm run gen-api-doc
+npm run gen
 ```
 
 # How to Start Local Server for API Doc
@@ -25,6 +25,6 @@ npm run server
 ## How to Add New API Category
 1. Create new openAPI spec template
     ```
-    ./cmd.sh create-new-category -c test
+    ./cmd.sh create-new-category -c $category
     ```
-3. modify api_docs/${category}.yaml and api_docs/${category}/*
+3. modify api_docs/$category.yaml and api_docs/$category/*
